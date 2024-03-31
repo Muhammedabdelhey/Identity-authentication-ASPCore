@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Y68fDVxjKDHvEIEPKdytUJQ3ClFRGfTdtNuHvxOZ26Q=",
+  "Source": "Identity-Authentication",
+  "BasePath": "_content/Identity-Authentication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
