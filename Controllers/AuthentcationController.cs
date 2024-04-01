@@ -31,8 +31,15 @@ namespace Identity_Authentication.Controllers
                 var role = await _userManager.AddToRoleAsync(user, "Admin");
                 if (role.Succeeded)
                 {
-                    var token =await _jwtService.GenreateToken(user);
-                    return Ok(token);
+                    var token = await _jwtService.GenreateToken(user);
+                    return Ok(new UserResponseDtocs
+                    {
+                        UserId = user.Id,
+                        Username = user.UserName,
+                        Email = user.Email,
+                        Phone = user.PhoneNumber,
+                        Token = token
+                    });
                 }
             }
             return BadRequest(new { errors = result.Errors.Select(e => e.Description) });

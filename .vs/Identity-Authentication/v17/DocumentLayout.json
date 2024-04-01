@@ -11,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:controllers\\authentcationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\dtos\\userresponsedtocs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:dtos\\userresponsedtocs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,20 +34,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAAAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAEgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T09:00:20.471Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserResponseDtocs.cs",
+              "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Dtos\\UserResponseDtocs.cs",
+              "RelativeDocumentMoniker": "Dtos\\UserResponseDtocs.cs",
+              "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Dtos\\UserResponseDtocs.cs",
+              "RelativeToolTip": "Dtos\\UserResponseDtocs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T08:13:31.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -103,15 +121,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TestController.cs",
               "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Controllers\\TestController.cs",
               "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Controllers\\TestController.cs",
               "RelativeToolTip": "Controllers\\TestController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T10:09:36.752Z"
+              "WhenOpened": "2024-03-31T10:09:36.752Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -121,9 +140,10 @@
               "RelativeDocumentMoniker": "Controllers\\AuthentcationController.cs",
               "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Controllers\\AuthentcationController.cs",
               "RelativeToolTip": "Controllers\\AuthentcationController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAgAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T11:10:51.005Z"
+              "WhenOpened": "2024-03-29T11:10:51.005Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -133,14 +153,14 @@
               "RelativeDocumentMoniker": "Services\\JWTService.cs",
               "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Services\\JWTService.cs",
               "RelativeToolTip": "Services\\JWTService.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBgAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T11:29:50.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",

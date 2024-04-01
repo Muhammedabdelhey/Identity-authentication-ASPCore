@@ -284,3 +284,4 @@ D:\Abdelhay projects\Identity-Authentication\obj\Debug\net8.0\refint\Identity-Au
 D:\Abdelhay projects\Identity-Authentication\obj\Debug\net8.0\Identity-Authentication.pdb
 D:\Abdelhay projects\Identity-Authentication\obj\Debug\net8.0\Identity-Authentication.genruntimeconfig.cache
 D:\Abdelhay projects\Identity-Authentication\obj\Debug\net8.0\ref\Identity-Authentication.dll
+D:\Abdelhay projects\Identity-Authentication\obj\Debug\net8.0\Identity-Authentication.sourcelink.json

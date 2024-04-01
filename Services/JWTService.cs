@@ -11,10 +11,8 @@ namespace Identity_Authentication.Services
     {
         public async Task<string> GenreateToken(User user )
         {
-            
             var tokenHandler = new JwtSecurityTokenHandler();
             var roles =await  _userManager.GetRolesAsync(user);
-
             var claims = new List<Claim>
             {
                 new (JwtRegisteredClaimNames.NameId ,user.Id),
@@ -38,6 +36,11 @@ namespace Identity_Authentication.Services
             var token = tokenHandler.CreateToken(tokenDescriptor);
             // Convert token to string
             var accessToken = tokenHandler.WriteToken(token);
+            // get token data 
+            var tokenData = new JwtSecurityToken(accessToken);
+            DateTime exirationDate = tokenData.ValidTo;
+            DateTime createdAt=tokenData.ValidFrom;
+            
             return accessToken;
         }
     }
