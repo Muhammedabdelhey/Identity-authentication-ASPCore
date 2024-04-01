@@ -47,7 +47,7 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme =
     options.DefaultSignInScheme =
     options.DefaultSignOutScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+}).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
     {
@@ -55,6 +55,7 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = jwtOptions.Issuer,
         ValidateAudience = true,
         ValidAudience = jwtOptions.Audience,
+        ValidateLifetime=true,
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(jwtOptions.SigningKey)
@@ -63,6 +64,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 #endregion
+
 # region add authorization Policy
 builder.Services.AddAuthorization(options =>
 {

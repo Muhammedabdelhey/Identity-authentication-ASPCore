@@ -9,10 +9,9 @@ namespace Identity_Authentication.Services
 {
     public class JWTService(JwtOptions _jwtOptions, UserManager<User> _userManager)
     {
-        public async Task<string> GenreateToken(User user )
+        public async Task<JwtSecurityToken> GenreateToken(User user)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var roles =await  _userManager.GetRolesAsync(user);
+            var roles = await _userManager.GetRolesAsync(user);
             var claims = new List<Claim>
             {
                 new (JwtRegisteredClaimNames.NameId ,user.Id),
@@ -24,6 +23,8 @@ namespace Identity_Authentication.Services
             {
                 claims.Add(new Claim(ClaimTypes.Role, role, ClaimValueTypes.String));
             }
+            #region make token useing handel and descriptor
+            var tokenHandler = new JwtSecurityTokenHandler();
             var tokenDescriptor = new SecurityTokenDescriptor()
             {
                 Issuer = _jwtOptions.Issuer,
@@ -31,16 +32,23 @@ namespace Identity_Authentication.Services
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptions.SigningKey)),
                     SecurityAlgorithms.HmacSha256),
-                Subject = new ClaimsIdentity(claims)
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddMinutes(_jwtOptions.Lifetime)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            // Convert token to string
-            var accessToken = tokenHandler.WriteToken(token);
-            // get token data 
-            var tokenData = new JwtSecurityToken(accessToken);
-            DateTime exirationDate = tokenData.ValidTo;
-            DateTime createdAt=tokenData.ValidFrom;
-            
+            var accessToken = (JwtSecurityToken)token;
+            #endregion
+            #region make token with JwtSecurityToken
+            //var accessToken = new JwtSecurityToken(
+            //        issuer: _jwtOptions.Issuer,
+            //        audience: _jwtOptions.Audience,
+            //        signingCredentials: new SigningCredentials(
+            //            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptions.SigningKey)),
+            //            SecurityAlgorithms.HmacSha256),
+            //        claims: claims,
+            //        expires: DateTime.UtcNow.AddMinutes(_jwtOptions.Lifetime)
+            //    );
+            #endregion
             return accessToken;
         }
     }

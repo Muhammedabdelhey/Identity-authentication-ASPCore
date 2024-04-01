@@ -11,16 +11,28 @@
       "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:controllers\\authentcationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\dtos\\tokenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:dtos\\tokenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\dtos\\userresponsedtocs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:dtos\\userresponsedtocs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAF5171E-E8D9-4307-ADF4-D719C639AFA8}|Identity-Authentication.csproj|d:\\abdelhay projects\\identity-authentication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,33 +46,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAEgAAAAAAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T09:00:20.471Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserResponseDtocs.cs",
-              "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Dtos\\UserResponseDtocs.cs",
-              "RelativeDocumentMoniker": "Dtos\\UserResponseDtocs.cs",
-              "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Dtos\\UserResponseDtocs.cs",
-              "RelativeToolTip": "Dtos\\UserResponseDtocs.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T08:13:31.103Z",
               "EditorCaption": ""
             },
             {
@@ -121,7 +120,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TokenResponse.cs",
+              "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Dtos\\TokenResponse.cs",
+              "RelativeDocumentMoniker": "Dtos\\TokenResponse.cs",
+              "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Dtos\\TokenResponse.cs",
+              "RelativeToolTip": "Dtos\\TokenResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:38:01.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ApplicationDBContext.cs",
+              "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\ApplicationDBContext.cs",
+              "RelativeDocumentMoniker": "ApplicationDBContext.cs",
+              "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\ApplicationDBContext.cs",
+              "RelativeToolTip": "ApplicationDBContext.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBEAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T13:10:39.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-01T13:08:46.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserResponseDtocs.cs",
+              "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Dtos\\UserResponseDtocs.cs",
+              "RelativeDocumentMoniker": "Dtos\\UserResponseDtocs.cs",
+              "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Dtos\\UserResponseDtocs.cs",
+              "RelativeToolTip": "Dtos\\UserResponseDtocs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T08:13:31.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "TestController.cs",
               "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Controllers\\TestController.cs",
@@ -140,7 +191,7 @@
               "RelativeDocumentMoniker": "Controllers\\AuthentcationController.cs",
               "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Controllers\\AuthentcationController.cs",
               "RelativeToolTip": "Controllers\\AuthentcationController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwCkAAAAXAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwCEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T11:10:51.005Z",
               "EditorCaption": ""
@@ -153,14 +204,14 @@
               "RelativeDocumentMoniker": "Services\\JWTService.cs",
               "ToolTip": "D:\\Abdelhay projects\\Identity-Authentication\\Services\\JWTService.cs",
               "RelativeToolTip": "Services\\JWTService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAAB0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T11:29:50.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Abdelhay projects\\Identity-Authentication\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",

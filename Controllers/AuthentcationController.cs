@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Identity_Authentication.Controllers
 {
@@ -38,7 +39,11 @@ namespace Identity_Authentication.Controllers
                         Username = user.UserName,
                         Email = user.Email,
                         Phone = user.PhoneNumber,
-                        Token = token
+                        Token = new TokenResponse
+                        {
+                            AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
+                            ExpireOn = token.ValidTo
+                        }
                     });
                 }
             }
@@ -54,13 +59,18 @@ namespace Identity_Authentication.Controllers
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
             if (result.Succeeded)
             {
-                var token =await _jwtService.GenreateToken(user);
-                return Ok(new UserResponseDtocs{
-                UserId = user.Id,
-                Username=user.UserName,
-                Email = user.Email,
-                Phone= user.PhoneNumber,
-                Token = token
+                var token = await _jwtService.GenreateToken(user);
+                return Ok(new UserResponseDtocs
+                {
+                    UserId = user.Id,
+                    Username = user.UserName,
+                    Email = user.Email,
+                    Phone = user.PhoneNumber,
+                    Token = new TokenResponse
+                    {
+                        AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
+                        ExpireOn = token.ValidTo
+                    }
                 });
             }
             return Unauthorized(new { message = "Invalid username or password" });
