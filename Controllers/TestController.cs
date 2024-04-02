@@ -16,6 +16,7 @@ namespace Identity_Authentication.Controllers
         [Authorize(policy: "AdminOrUser")]
         public async Task<IActionResult> test()
         {
+
             return Ok( await applecationDBContext.Users.ToListAsync());
         }
     }
