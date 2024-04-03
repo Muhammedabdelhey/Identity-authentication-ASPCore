@@ -19,7 +19,7 @@ namespace Identity_Authentication.Controllers
         {
             // valid user data
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            User user = new User
+            User user = new()
             {
                 UserName = userDto.Username,
                 Email = userDto.Email,

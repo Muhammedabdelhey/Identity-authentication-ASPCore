@@ -11,19 +11,17 @@ namespace Identity_Authentication
         {
 
         }
-        DbSet<User> users { get; set; }
+        DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            List<IdentityRole> roles = new List<IdentityRole>
+            List<IdentityRole> roles = new()
             {
-                new IdentityRole
-                {
+                new() {
                     Name= "Admin",
                     NormalizedName = "ADMIN"
                 },
-                new IdentityRole
-                {
+                new() {
                     Name= "User",
                     NormalizedName = "USER"
                 }
