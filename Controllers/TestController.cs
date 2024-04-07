@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,10 +13,10 @@ namespace Identity_Authentication.Controllers
         //[Authorize(Roles = "Admin")]
         // how make Authorization based on policy , policy can have mane role relation will be role1 or role2
         [Authorize(policy: "AdminOrUser")]
-        public async Task<IActionResult> test()
+        public async Task<IActionResult> Test()
         {
 
-            return Ok( await applecationDBContext.Users.ToListAsync());
+            return Ok(await applecationDBContext.Users.ToListAsync());
         }
     }
 }

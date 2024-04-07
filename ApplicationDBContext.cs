@@ -7,16 +7,12 @@ namespace Identity_Authentication
 {
     public class ApplicationDBContext : IdentityDbContext<User>
     {
-        public ApplicationDBContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
-        {
-
-        }
-        DbSet<User> Users { get; set; }
+        public ApplicationDBContext(DbContextOptions dbContextOptions) : base(dbContextOptions) { }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            List<IdentityRole> roles = new()
-            {
+            List<IdentityRole> roles =
+            [
                 new() {
                     Name= "Admin",
                     NormalizedName = "ADMIN"
@@ -25,7 +21,7 @@ namespace Identity_Authentication
                     Name= "User",
                     NormalizedName = "USER"
                 }
-            };
+            ];
             builder.Entity<IdentityRole>().HasData(roles);
         }
     }

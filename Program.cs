@@ -17,10 +17,38 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(connectionString));
 #endregion
 
-# region register JwtOptions that get Jwt credentials 
 var jwtOptions = builder.Configuration.GetSection("JWT").Get<JwtOptions>();
-builder.Services.AddSingleton(jwtOptions);
-#endregion
+if (jwtOptions != null)
+{
+    builder.Services.AddSingleton(jwtOptions);
+    #region JWTBearerToken Authentication
+    builder.Services.AddAuthentication(options =>
+    {
+        // assign all this shceme to jwt default Scheme 
+        options.DefaultAuthenticateScheme =
+        options.DefaultChallengeScheme =
+        options.DefaultForbidScheme =
+        options.DefaultScheme =
+        options.DefaultSignInScheme =
+        options.DefaultSignOutScheme = JwtBearerDefaults.AuthenticationScheme;
+    }).AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = jwtOptions.Issuer,
+            ValidateAudience = true,
+            ValidAudience = jwtOptions.Audience,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(jwtOptions.SigningKey)
+            )
+        };
+    });
+
+    #endregion
+}
 
 # region register Jwt Service
 builder.Services.AddTransient<JWTService>();
@@ -37,33 +65,7 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 .AddEntityFrameworkStores<ApplicationDBContext>();
 #endregion
 
-#region JWTBearerToken Authentication
-builder.Services.AddAuthentication(options =>
-{
-    // assign all this shceme to jwt default Scheme 
-    options.DefaultAuthenticateScheme =
-    options.DefaultChallengeScheme =
-    options.DefaultForbidScheme =
-    options.DefaultScheme =
-    options.DefaultSignInScheme =
-    options.DefaultSignOutScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidIssuer = jwtOptions.Issuer,
-        ValidateAudience = true,
-        ValidAudience = jwtOptions.Audience,
-        ValidateLifetime=true,
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(jwtOptions.SigningKey)
-        )
-    };
-});
 
-#endregion
 
 # region add authorization Policy
 builder.Services.AddAuthorization(options =>
@@ -71,7 +73,7 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminOnly", policy =>
            policy.RequireClaim(ClaimTypes.Role, "Admin"));
     options.AddPolicy("AdminOrUser", policy =>
-           policy.RequireClaim(ClaimTypes.Role, new[] { "Admin", "User" }));
+           policy.RequireClaim(ClaimTypes.Role, ["Admin", "User"]));
 
 });
 #endregion

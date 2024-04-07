@@ -9,8 +9,9 @@ namespace Identity_Authentication.Services
 {
     public class JWTService(JwtOptions _jwtOptions, UserManager<User> _userManager)
     {
-        public async Task<JwtSecurityToken> GenreateToken(User user)
+        public async Task<JwtSecurityToken> GenreateToken(User user )
         {
+
             var roles = await _userManager.GetRolesAsync(user);
             var claims = new List<Claim>
             {

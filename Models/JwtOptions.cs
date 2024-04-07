@@ -2,10 +2,10 @@
 {
     public class JwtOptions
     {
-        public string? Issuer { get; set; }
-        public string? Audience { get; set; }
+        public required string Issuer { get; set; }
+        public required string Audience { get; set; }
         public int Lifetime { get; set; }
-        public string? SigningKey { get; set; }
+        public required string SigningKey { get; set; }
     }
 
 }

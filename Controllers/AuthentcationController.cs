@@ -1,8 +1,6 @@
 ﻿using Identity_Authentication.Dtos;
 using Identity_Authentication.Models;
 using Identity_Authentication.Services;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
@@ -54,7 +52,7 @@ namespace Identity_Authentication.Controllers
         public async Task<IActionResult> Login([FromForm] LoginDto loginDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            User user = await _userManager.FindByEmailAsync(loginDto.Email);
+            User? user = await _userManager.FindByEmailAsync(loginDto.Email);
             if (user == null) return BadRequest(new { message = "Invalid username or password" });
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
             if (result.Succeeded)
