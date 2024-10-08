@@ -12,7 +12,7 @@ namespace Identity_Authentication.Controllers
         // how make authorize based on roles 
         [Authorize(Roles = "Admin")]
         // how make Authorization based on policy , policy can have mane role relation will be role1 or role2
-        //[Authorize(policy: "AdminOrUser")]
+        [Authorize(policy: "AdminOrUser")]
         public async Task<IActionResult> Test()
         {
 
