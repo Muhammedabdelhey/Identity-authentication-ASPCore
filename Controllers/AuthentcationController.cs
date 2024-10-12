@@ -30,7 +30,7 @@ namespace Identity_Authentication.Controllers
                 var role = await _userManager.AddToRoleAsync(user, "Admin");
                 if (role.Succeeded)
                 {
-                    var token = await _jwtService.GenreateToken(user);
+                    var token = await _jwtService.GenerateToken(user);
                     return Ok(new UserResponseDtocs
                     {
                         UserId = user.Id,
@@ -57,7 +57,7 @@ namespace Identity_Authentication.Controllers
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
             if (result.Succeeded)
             {
-                var token = await _jwtService.GenreateToken(user);
+                var token = await _jwtService.GenerateToken(user);
                 return Ok(new UserResponseDtocs
                 {
                     UserId = user.Id,

@@ -18,10 +18,6 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(connectionString));
 #endregion
 
-#region register JwtOptions that get Jwt credentials 
-var jwtOptions = builder.Configuration.GetSection("JWT").Get<JwtOptions>();
-builder.Services.AddSingleton(jwtOptions);
-#endregion
 
 # region register Jwt Service
 builder.Services.AddTransient<JWTService>();
@@ -36,6 +32,11 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
     options.Password.RequireNonAlphanumeric = true;
 })
 .AddEntityFrameworkStores<ApplicationDBContext>();
+#endregion
+
+#region register JwtOptions that get Jwt credentials 
+var jwtOptions = builder.Configuration.GetSection("JWT").Get<JwtOptions>();
+builder.Services.AddSingleton(jwtOptions);
 #endregion
 
 #region JWTBearerToken Authentication
@@ -64,7 +65,6 @@ builder.Services.AddAuthentication(options =>
         )
     };
 });
-
 #endregion
 
 # region add authorization Policy
